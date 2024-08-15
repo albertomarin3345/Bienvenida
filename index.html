@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+</head>
+<body>
+  <header class="header content">
+    <div class="header-video">
+      <video src="Intro.mp4" autoplay loop muted></video>
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Zona 6</h1>
+      <p>14FIS5006P</p>
+      <div id="formulario-contenedor">
+        <form>
+          <label for="nombre">Ingresa tu nombre docente:</label>
+          <input type="text" id="nombre" name="nombre" placeholder=" " oninput="this.value = this.value.toUpperCase()">
+          <button id="enviar" type="button" onclick="mostrarBienvenida()">Enviar</button>
+        </form>
+      </div>
+      <div id="bienvenida-contenedor" style="display: none;">
+        <div id="mensaje-imagen-contenedor">
+          <img id="imagen" src="Return.gif" alt="Pizarra con regreso a clases">
+          <p id="mensaje" class="mensaje-regreso">Bienvenido...</p>
+        </div>
+      </div>
+    </header>
+  
+    <!-- JavaScript -->
+    <script>
+    function mostrarBienvenida() {
+  var nombre = document.getElementById("nombre").value;
+  document.getElementById("mensaje").innerHTML = "Bienvenid@, <span class='nombre rojo'>" + nombre + "</span> al nuevo ciclo 2024. De parte del equipo de supervisón deseamos un excelente inicio de clases. En el siguiente enlace podrás encontrar una IA para que construyas tus planeaciones <a href='https://www.comenio.ai' target='_blank' class='referencia'>prueba la IA</a>.";
+  document.getElementById("mensaje").classList.add("mensaje-regreso");
+  document.getElementById("mensaje").classList.add("mensaje-regreso");
+  document.getElementById("imagen").style.display = 'block';
+  var bienvenidaContenedor = document.getElementById("bienvenida-contenedor");
+  bienvenidaContenedor.style.display = 'block'; // Mostrar contenedor de bienvenida
+  bienvenidaContenedor.classList.add("mostrar"); // Agregar clase mostrar
+  document.getElementById("formulario-contenedor").style.display = 'none'; // Ocultar contenedor del formulario
+  document.querySelector('.header-content p').classList.add('ocultar-p'); // Ocultar párrafo
+  document.querySelector('.header-content h1').classList.add('ocultar-h1'); // Ocultar h1
+  return false; // Agregado para evitar que el formulario se envíe y la página se recargue
+}
+    </script>
+</body>
+</html>
