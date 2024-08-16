@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.content {
+  max-width: 40rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-video video {
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .header-video video {
+    width: 100vw;
+    height: 50vh; /* o cualquier otro valor que desees */
+  }
+}
+
+.header-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #303952;
+  z-index: 1;
+  opacity: .80;
+}
+
+.header-content {
+  z-index: 2;
+  max-width: 600px; /* Añade un ancho máximo */
+  margin: 0 auto; /* Centra horizontalmente */
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+  font-family: 'Lobster', cursive;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  background: #c44569;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+@media (max-width: 960px) {
+  .content {
+    padding: 0 3rem 0 3rem;
+  }
+}
+
+#formulario-contenedor {
+  max-width: 600px; /* Aumenta el ancho máximo del formulario */
+  margin: 40px auto; /* Centrar horizontalmente */
+  padding: 20px; /* Aumenta el padding para que el formulario sea más grande */
+  background-color: #fff; /* Fondo blanco */
+  border: 2px solid #060606; /* Borde gris claro */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #060606;
+}
+
+#bienvenida-contenedor.mostrar {
+  display: block;
+}
+
+#bienvenida-contenedor.mostrar + p {
+  display: none;
+}
+
+input[type="text"] {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  width: 93%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input[type="text"]::placeholder {
+  text-align: center; /* Centra el placeholder */
+  color: #ccc; /* Color del placeholder, opcional */
+}
+
+button[type="button"] {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+#bienvenida-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupar toda la altura de la pantalla */
+}
+
+.ocultar-p {
+  display: none;
+}
+
+.ocultar-h1 {
+  display: none;
+}
+
+h1 {
+  margin: 0 0 0 0; /* Reducir margen inferior del título */
+  text-align: center;
+  padding-top: 30px;
+}
+
+#mensaje {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje-regreso {
+  color: white !important; /* Color blanco */
+}
+
+.rojo {
+  color: red; /* Color rojo para el nombre */
+}
+
+.referencia {
+  color: #f8f800cc; /* Cambia este color por el que desees */
+  text-decoration: underline;
+}
+
+#imagen {
+  display: none; /* Ocultar la imagen por defecto */
+  border: 2px solid #060606; /* Borde gris claro */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 20px auto; /* Centrar horizontalmente */
+  width: 90%; /* Establece el ancho al 80% del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  margin-top: 250px; /* Agrega un margen superior de 50px */
+  margin-bottom: 30px; /* Agrega un margen inferior de 50px */
+}
+
+.mostrar-imagen {
+  display: block; /* Mostrar la imagen cuando se agrega esta clase */
+}
+
+#mensaje {
+  margin: 0 0 0 0; /* Reducir margen superior del mensaje */
+  font-size: 18px;
+  color: #666;
+  text-align: center; /* Centrar texto */
+}
+
+.nombre {
+  font-weight: bold;
+  color: red; /* Puedes cambiar este color por el que desees */
+}
